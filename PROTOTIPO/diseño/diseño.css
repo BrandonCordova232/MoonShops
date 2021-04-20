@@ -1,0 +1,1023 @@
+
+body{
+    display: flex; 
+    justify-content: center;
+    overflow: hidden;
+    height: 100vh;
+    backface-visibility: hidden;
+    background: url(https://www.universehaircolor.com.ve/wp-content/uploads/2018/07/fondo-estrellado-1.jpg)
+}
+
+body#ingreso {
+   background: url(https://www.blogdelfotografo.com/wp-content/uploads/2012/01/silueta-estrellas-scaled.jpg);
+   display: flex; 
+   justify-content: center;
+   overflow: hidden;
+   backface-visibility: hidden;
+}
+
+.barras-laterales-1 {
+   
+   background-color: rgba(255, 255, 255, 0.1);
+   width: 10%;
+   right: 650px;
+   position: relative;
+   height: 102%;
+   border-color:rgb(255, 155, 4);
+   border-style: inset;
+}
+.barras-laterales-2 {
+   
+   background-color: rgba(255, 255, 255, 0.1);
+   width: 10%;
+   left: 650px;
+   position: relative;
+   height: 102%;
+   border-color:rgb(255, 155, 4);
+   border-style: inset;
+}
+
+.usuario {
+   background-color: rgba(255, 255, 255, 0.1);
+   width: 40%;
+   top: 250px;
+   position: absolute;
+   height: 60%;
+   border-color:rgb(255, 166, 0);
+   border-width: 20px;
+   border-style: double;
+}
+
+.registro {
+   background-color: rgba(255, 255, 255, 0.1);
+   width: 40%;
+   top: 180px;
+   position: absolute;
+   height: 70%;
+   border-color:rgb(255, 166, 0);
+   border-width: 20px;
+   border-style: double;
+}
+
+header{
+
+    background-color: rgba(255, 255, 255, 0.1);
+    width: 98%;
+    top: 0px;
+    position: absolute;
+    height: 300px;
+    border-color:rgb(187, 255, 0);
+    border-style: inset;
+    
+}
+
+header#productos {
+    background-image: linear-gradient(30deg, #120622, #1f2681);
+    position: absolute;
+    border-color:rgb(187, 255, 0);
+    border-style: double;
+    border-width: 5px;
+    width: 48%;
+    top: 357px;
+    left: 5px;
+    height: 520px;
+}
+
+header#información{
+   background-image: linear-gradient(30deg, #1f2681, #120622);
+   position: absolute;
+   border-color:rgb(187, 255, 0);
+   border-style: double;
+   border-width: 5px;
+   width: 48%;
+   top: 354px;
+   right: -10px;
+   height: 520px;
+}
+
+header#iluminación {
+   background-color: rgba(131, 51, 177, 0.404);
+   width: 100%;
+   position: absolute;
+   height: 100%;
+
+}
+
+.moon  {
+    background-image: linear-gradient(30deg, #13223f, #0e1a30);
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    border-style:double;
+    border-color:rgb(0, 243, 142);
+    position: absolute;
+    top:  20px;
+    right: 20px;
+}
+
+.moon::before{
+    content: '';
+    background: #c7938b;
+    position: relative;
+    display: block;
+    height: 100%;
+    width: 100%;
+    border-radius: 50%;
+    z-index: -1;
+    animation: 3s moonlight linear infinite alternate;
+}
+
+@keyframes moonlight{
+    0%{
+        transform: translate(-60px, 60px) scale(0.9);
+    }
+    50%{
+        transform: translate(0px,0px) scale(1.02);
+        box-shadow: 0 0 10px #f9f3f2, 0 0 80px 8px #c7938b;
+        background: #efdbd8;       
+    }
+    100%{
+        transform: translate(60px, -60px) scale(0.9);
+    }
+}
+.wrap {
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: top;
+    right: 550px;
+    top: 150px;
+    position: absolute;
+}
+
+.wrap#ingreso-usuario{
+   min-height: 100%;
+   display: flex;
+   flex-direction: column;
+   justify-content: top;
+   right: 535px;
+   top: 40px;
+   position: absolute;
+}
+
+.wrap#registro-usuario{
+   min-height: 100%;
+   display: flex;
+   flex-direction: column;
+   justify-content: top;
+   right: 535px;
+   top: 25px;
+   position: absolute;
+}
+
+.word {
+    font-size: 8em;
+    text-align: right;
+    line-height: 1;
+    color: #c6e2ff;
+    animation: neon 0.08s ease-in-out infinite alternate;
+}
+
+
+@keyframes neon {
+    from {
+          text-shadow: 0 0 6px rgba(202, 228, 225, 0.92),
+                   0 0 30px rgba(202, 228, 225, 0.34), 
+                   0 0 12px rgba(30, 132, 242, 0.52), 
+                   0 0 21px rgba(30, 132, 242, 0.92), 
+                   0 0 34px rgba(30, 132, 242, 0.78), 
+                   0 0 54px rgba(30, 132, 242, 0.92);
+   }
+    to {
+          text-shadow: 0 0 6px rgba(202, 228, 225, 0.98),
+                   0 0 30px rgba(202, 228, 225, 0.42), 
+                   0 0 12px rgba(30, 132, 242, 0.58),
+                   0 0 22px rgba(30, 132, 242, 0.84), 
+                   0 0 38px rgba(30, 132, 242, 0.88), 
+                   0 0 60px rgba(30, 132, 242, 1);
+   }
+}
+
+#menu ul li {
+    background-color:#2e518b;
+ }
+ 
+ #menu ul {
+  list-style:none;
+  margin:0;
+  padding:0;
+ }
+ 
+ #menu ul a {
+  display:block;
+  color:#fff;
+  text-decoration:none;
+  font-weight:600;
+  font-size:15px;
+  padding:10px;
+  font-family:"HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  text-transform:uppercase;
+  letter-spacing:1px;
+ }
+ 
+ #menu ul li {
+  position:relative;
+  float:left;
+  margin:0;
+  padding:0;
+ }
+ 
+ #menu ul li:hover {
+  background:#541464;
+  border-style: inset;
+  border-color:lime
+ }
+ 
+ #menu ul ul {
+  display:none;
+  position:absolute;
+  top:100%;
+  left: -3px;
+  padding:0;
+ }
+ 
+ #menu ul ul li {
+  float:none;
+  width:150px
+ }
+ 
+ #menu ul ul a {
+  line-height:120%;
+  padding:10px 15px;
+ }
+ 
+ #menu ul li:hover > ul {
+  display:block;
+ }
+ .logo img {
+    display: flex;
+    flex-wrap: wrap;
+    width: 220px;
+    max-width: 100%;
+ }
+
+ #overflow {
+    width: 100%;
+    overflow: hidden;
+ }
+ #slide1:checked ~ #slides .inner {
+    margin-left: 0;
+ }
+ #slide2:checked ~ #slides .inner {
+    margin-left: -100%;
+ }
+ #slide3:checked ~ #slides .inner {
+    margin-left: -200%;
+ }
+ #slide4:checked ~ #slides .inner {
+    margin-left: -300%;
+ }
+ #slides .inner {
+    transition: margin-left 800ms cubic-bezier(0.770, 0.000, 0.175, 1.000);
+    width: 400%;
+    line-height: 0;
+    height: 300px;
+ }
+ #slides .slide {
+    width: 25%;
+    float:left;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    color: #fff;
+ }
+ #slides .slide_1 {
+    background-image: linear-gradient(30deg, #182c51, #09101e);
+ }
+ #slides .slide_2 {
+    background-image: linear-gradient(30deg, #182c51, #09101e);
+ }
+ #slides .slide_3 {
+    background-image: linear-gradient(30deg, #182c51, #09101e);
+ }
+ #slides .slide_4 {
+    background-image: linear-gradient(30deg, #182c51, #09101e);
+ }
+ #controls {
+    margin: -80px 0 0 0;
+    width: 100%;
+    height: 0px;
+    z-index: 3;
+    position: relative;
+ }
+ #controls label {
+    transition: opacity 0.2s ease-out;
+    display: none;
+    width: 50px;
+    height: 50px;
+    opacity: .4;
+ }
+ #controls label:hover {
+    opacity: 1;
+ }
+ #slide1:checked ~ #controls label:nth-child(2),
+ #slide2:checked ~ #controls label:nth-child(3),
+ #slide3:checked ~ #controls label:nth-child(4),
+ #slide4:checked ~ #controls label:nth-child(1) {
+    background: url(https://image.flaticon.com/icons/svg/130/130884.svg) no-repeat;
+    float:right;
+    margin: 0 -50px 0 0;
+    display: block;
+ }
+ #slide1:checked ~ #controls label:nth-last-child(1),
+ #slide2:checked ~ #controls label:nth-last-child(4),
+ #slide3:checked ~ #controls label:nth-last-child(3),
+ #slide4:checked ~ #controls label:nth-last-child(2) {
+    background: url(https://image.flaticon.com/icons/svg/130/130882.svg) no-repeat;
+    float:left;
+    margin: 0 0 0 -50px;
+    display: block;
+ }
+ #bullets {
+    margin: 200px 0 0;
+    text-align: center;
+ }
+ #bullets label {
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    border-radius:100%;
+    background: #ccc;
+    margin: 0 10px;
+ }
+ #slide1:checked ~ #bullets label:nth-child(1),
+ #slide2:checked ~ #bullets label:nth-child(2),
+ #slide3:checked ~ #bullets label:nth-child(3),
+ #slide4:checked ~ #bullets label:nth-child(4) {
+    background: #444;
+ }
+ @media screen and (max-width: 900px) {
+    #slide1:checked ~ #controls label:nth-child(2),
+    #slide2:checked ~ #controls label:nth-child(3),
+    #slide3:checked ~ #controls label:nth-child(4),
+    #slide4:checked ~ #controls label:nth-child(1),
+    #slide1:checked ~ #controls label:nth-last-child(2),
+    #slide2:checked ~ #controls label:nth-last-child(3),
+    #slide3:checked ~ #controls label:nth-last-child(4),
+    #slide4:checked ~ #controls label:nth-last-child(1) {
+       margin: 0;
+    }
+    #slides {
+       max-width: calc(100% - 140px);
+       margin: 0 auto;
+    }
+ }
+
+ #slider img{
+    width: 180px;
+    border-style: double;
+    border-color: rgb(20, 180, 167);
+    border-width: 10px;
+    height: 100%;
+    object-fit: cover; 
+    display: flex;
+    flex-wrap: wrap;
+}
+#slider {
+    margin: 0 auto;
+    width: 700px;
+    height: 100px;
+    max-width: 100%;
+    text-align: center;
+ }
+ #slider input[type=radio] {
+    display: none;
+ }
+ #slider label {
+    cursor:pointer;
+    text-decoration: none;
+ }
+ #slides {
+    padding: 10px;
+    border: 3px solid rgb(121, 182, 182);
+    background: #6d3cc7;
+    position: relative;
+    z-index: 1;
+    box-shadow: inset 0 0 0 5px;
+    animation: clipMe 8s linear infinite;
+    animation-delay: -4s;
+    top: 100px;
+ }
+
+ .texto {
+    position: absolute;
+    color: rgb(216, 218, 99);
+    font-family:'Trebuchet MS';
+    left: 200px;
+    top: 10px;
+ }
+
+ .libro-1 {
+    position: absolute;
+    text-align: justify;
+    font-family:Arial, Helvetica, sans-serif ;
+    top: 30px;
+ }
+
+ .libro-2 {
+   position: relative;
+   text-align: justify;
+   font-family:Arial, Helvetica, sans-serif ;
+   top: 139px;
+   left: 55px;
+}
+
+.libro-3 {
+   position: relative;
+   text-align: justify;
+   font-family:Arial, Helvetica, sans-serif ;
+   top: 156px;
+   left: 55px;
+}
+
+.libro-4 {
+   position: relative;
+   text-align: justify;
+   font-family:Arial, Helvetica, sans-serif ;
+   top: 150px;
+   left: 55px;
+}
+
+.luna-1 img {
+   position: absolute;
+   width: 150px;
+   bottom: -25px;
+   left: -135px;
+   transform: scaleX(-1);
+}
+.luna-2 img {
+   position: absolute;
+   width: 150px;
+   bottom: -25px;
+   left: 380px;
+}
+a{color:#fff;text-decoration:none}
+#centrada{margin:auto;width:100%;font-family:Verdana;font-weight:700;text-transform:uppercase;text-align:center;display:flex;justify-content:left;flex-direction:row;align-items:center;height:109vh}
+.utopix{padding-bottom:50px}
+.cube{width:80%;height:50px;-webkit-transition:all 250ms ease;-moz-transition:all 250ms ease;-o-transition:all 250ms ease;transition:all 250ms ease;-webkit-transform-style:preserve-3d;-moz-transform-style:preserve-3d;-o-transform-style:preserve-3d;-ms-transform-style:preserve-3d;transform-style:preserve-3d}
+.active-state,.default-state{height:50px}
+.cube +.cube{margin:10px 0}
+.default-state{-webkit-transform:translateZ(25px);-moz-transform:translateZ(25px);-o-transform:translateZ(25px);-ms-transform:translateZ(25px);transform:translateZ(25px)}
+.flip-to-top .active-state{-webkit-transform:rotateX(90deg) translateZ(75px);-moz-transform:rotateX(90deg) translateZ(75px);-o-transform:rotateX(90deg) translateZ(75px);-ms-transform:rotateX(90deg) translateZ(75px);transform:rotateX(90deg) translateZ(75px)}
+.flip-to-bottom .active-state{-webkit-transform:rotateX(-90deg) translateZ(-50px);-moz-transform:rotateX(-90deg) translateZ(-50px);-o-transform:rotateX(-90deg) translateZ(-50px);-ms-transform:rotateX(-90deg) translateZ(-50px);transform:rotateX(-90deg) translateZ(-50px)}
+.cube.flip-to-top:hover{-webkit-transform:rotateX(-89deg);-moz-transform:rotateX(-89deg);-o-transform:rotateX(-89deg);-ms-transform:rotateX(-89deg);transform:rotateX(-89deg)}
+.cube.flip-to-bottom:hover{-webkit-transform:rotateX(89deg);-moz-transform:rotateX(89deg);-o-transform:rotateX(89deg);-ms-transform:rotateX(89deg);transform:rotateX(89deg)}
+.cube{text-align:center;margin:0 auto}
+.active-state,.default-state{font-size:16px;text-transform:uppercase;color:#fff;line-height:50px;-webkit-transition:background 250ms ease;-moz-transition:background 250ms ease;-o-transition:background 250ms ease;transition:background 250ms ease}
+.cube:hover .default-state{background:#000}
+.facebook{background:#3b5998}
+.twitter{background:#019AD1}
+.youtube{background:#D34836}
+.linkedin{background:#069}
+
+.sobre-nosotros-title {
+   font-family:Arial, Helvetica, sans-serif ;
+   color: rgb(216, 218, 99);
+   position: absolute;
+   right: 270px;
+   top: 10px;
+}
+
+.sobre-nosotros-info {
+   color:ivory;
+   font-family:Arial, Helvetica, sans-serif ;
+   position: absolute;
+   justify-content: center;
+   top: 100px;
+   left: 30px;
+   
+}
+
+.luna-3 img {
+   position: absolute;
+   width: 150px;
+   bottom: 405px;
+   left: 485px;
+}
+.luna-4 img {
+   position: absolute;
+   width: 150px;
+   bottom: 405px;
+   left: 130px;
+   transform: scaleX(-1);
+}
+
+.libro-img img{
+   position: absolute;
+   width: 200px;
+   top: 120px;
+   left: 0px;
+}
+
+.lapiz-img img{
+   position: absolute;
+   width: 400px;
+   top: 75px;
+   left: 50px;
+}
+
+.usuario .titulo {
+   text-align: center;
+   position: absolute;
+   font-family:Arial, Helvetica, sans-serif;
+   color: lavenderblush;
+   font-size: 6mm;
+   border-style: inset;
+   background-color: lightseagreen;
+   border-color: lightblue;
+   left: 122px;
+   top: 50px;
+   width: 400px;
+}
+
+.registro .titulo {
+   text-align: center;
+   position: absolute;
+   font-family:Arial, Helvetica, sans-serif;
+   color: lavenderblush;
+   font-size: 3mm;
+   border-style: inset;
+   background-color: lightseagreen;
+   border-color: lightblue;
+   left: 122px;
+   top: 50px;
+   width: 400px;
+}
+
+.usuario .usuario-nombre {
+   text-align: center;
+   position: absolute;
+   font-family:Arial, Helvetica, sans-serif;
+   color: lavenderblush;
+   font-size: 3mm;
+   border-style: inset;
+   background-color: lightseagreen;
+   border-color: lightblue;
+   left: 270px;
+   top: 200px;
+   width: 100px;
+}
+.usuario .usuario-contraseña {
+   text-align: center;
+   position: absolute;
+   font-family:Arial, Helvetica, sans-serif;
+   color: lavenderblush;
+   font-size: 3mm;
+   border-style: inset;
+   background-color: lightseagreen;
+   border-color: lightblue;
+   left: 270px;
+   top: 310px;
+   width: 100px;
+}
+
+
+.registro .rut {
+   text-align: center;
+   position: absolute;
+   font-family:Arial, Helvetica, sans-serif;
+   color: lavenderblush;
+   font-size: 2mm;
+   border-style: inset;
+   background-color: lightseagreen;
+   border-color: lightblue;
+   left: 150px;
+   top: 150px;
+   width: 100px;
+}
+
+.registro .nombre {
+   text-align: center;
+   position: absolute;
+   font-family:Arial, Helvetica, sans-serif;
+   color: lavenderblush;
+   font-size: 2mm;
+   border-style: inset;
+   background-color: lightseagreen;
+   border-color: lightblue;
+   left: 150px;
+   top: 190px;
+   width: 100px;
+}
+
+.registro .apellido {
+   text-align: center;
+   position: absolute;
+   font-family:Arial, Helvetica, sans-serif;
+   color: lavenderblush;
+   font-size: 2mm;
+   border-style: inset;
+   background-color: lightseagreen;
+   border-color: lightblue;
+   left: 150px;
+   top: 230px;
+   width: 100px;
+}
+
+.registro .correo {
+   text-align: center;
+   position: absolute;
+   font-family:Arial, Helvetica, sans-serif;
+   color: lavenderblush;
+   font-size: 2mm;
+   border-style: inset;
+   background-color: lightseagreen;
+   border-color: lightblue;
+   left: 150px;
+   top: 270px;
+   width: 100px;
+}
+
+.registro .fecha-nac {
+   text-align: center;
+   position: absolute;
+   font-family:Arial, Helvetica, sans-serif;
+   color: lavenderblush;
+   font-size: 2mm;
+   border-style: inset;
+   background-color: lightseagreen;
+   border-color: lightblue;
+   left: 150px;
+   top: 310px;
+   width: 100px;
+}
+
+.registro .telefono {
+   text-align: center;
+   position: absolute;
+   font-family:Arial, Helvetica, sans-serif;
+   color: lavenderblush;
+   font-size: 2mm;
+   border-style: inset;
+   background-color: lightseagreen;
+   border-color: lightblue;
+   left: 150px;
+   top: 350px;
+   width: 100px;
+}
+
+.registro .region {
+   text-align: center;
+   position: absolute;
+   font-family:Arial, Helvetica, sans-serif;
+   color: lavenderblush;
+   font-size: 2mm;
+   border-style: inset;
+   background-color: lightseagreen;
+   border-color: lightblue;
+   left: 150px;
+   top: 390px;
+   width: 100px;
+}
+
+.registro .nivel-educacional {
+   text-align: center;
+   position: absolute;
+   font-family:Arial, Helvetica, sans-serif;
+   color: lavenderblush;
+   font-size: 2mm;
+   border-style: inset;
+   background-color: lightseagreen;
+   border-color: lightblue;
+   left: 150px;
+   top: 430px;
+   width: 100px;
+}
+
+
+.registro .contraseña {
+   text-align: center;
+   position: absolute;
+   font-family:Arial, Helvetica, sans-serif;
+   color: lavenderblush;
+   font-size: 2mm;
+   border-style: inset;
+   background-color: lightseagreen;
+   border-color: lightblue;
+   left: 150px;
+   top: 470px;
+   width: 100px;
+}
+
+
+.registro .confirmar-registro {
+   text-align: center;
+   position: absolute;
+   font-family:Arial, Helvetica, sans-serif;
+   color: lavenderblush;
+   font-size: 3mm;
+   border-style: inset;
+   background-color: lightseagreen;
+   border-color: lightblue;
+   left: 100px;
+   top: 550px;
+   width: 200px;
+}
+
+.registro .volver-registro {
+   text-align: center;
+   position: absolute;
+   font-family:Arial, Helvetica, sans-serif;
+   color: lavenderblush;
+   font-size: 3mm;
+   border-style: inset;
+   background-color: lightseagreen;
+   border-color: lightblue;
+   left: 350px;
+   top: 550px;
+   width: 200px;
+}
+
+.usuario .confirmar {
+   text-align: center;
+   position: absolute;
+   font-family:Arial, Helvetica, sans-serif;
+   color: lavenderblush;
+   font-size: 3mm;
+   border-style: inset;
+   background-color: lightseagreen;
+   border-color: lightblue;
+   left: 100px;
+   top: 450px;
+   width: 200px;
+}
+
+.usuario .volver {
+   text-align: center;
+   position: absolute;
+   font-family:Arial, Helvetica, sans-serif;
+   color: lavenderblush;
+   font-size: 3mm;
+   border-style: inset;
+   background-color: lightseagreen;
+   border-color: lightblue;
+   left: 350px;
+   top: 450px;
+   width: 200px;
+}
+
+.barra-usuario {
+   position: absolute;
+   left: 234px;
+   top: 270px;
+   width: 100px;
+}
+
+.barra-contraseña{
+   position: absolute;
+   left: 234px;
+   top: 380px;
+   width: 100px;
+}
+
+.barra-rut {
+   position: absolute;
+   left: 270px;
+   top: 157px;
+   width: 100px;
+}
+
+.barra-nombre {
+   position: absolute;
+   left: 270px;
+   top: 197px;
+   width: 100px;
+}
+
+.barra-apellido {
+   position: absolute;
+   left: 270px;
+   top: 237px;
+   width: 100px;
+}
+
+.barra-correo {
+   position: absolute;
+   left: 270px;
+   top: 277px;
+   width: 100px;
+}
+
+.barra-fecha-nac {
+   position: absolute;
+   left: 270px;
+   top: 317px;
+   width: 100px;
+}
+
+.barra-telefono {
+   position: absolute;
+   left: 270px;
+   top: 357px;
+   width: 100px;
+}
+
+.seleccionar-region {
+   position: absolute;
+   left: 270px;
+   top: 397px;
+   background-color: #ffae00;
+   border-color: #00ff37;
+   border-style: double;
+}
+
+.seleccionar-nivel-educacional {
+   position: absolute;
+   left: 270px;
+   top: 437px;
+   background-color: #ffae00;
+   border-color: #00ff37;
+   border-style: double;
+}
+
+.registro-barra-contraseña {
+   position: absolute;
+   left: 270px;
+   top: 477px;
+   width: 100px;
+
+} 
+
+.estrella img {
+   position: absolute;
+   width: 150px;
+   bottom: 405px;
+   left: 10px;
+}
+.estrella-2 img {
+   position: absolute;
+   width: 150px;
+   bottom: 405px;
+   right: 10px;
+}
+.estrella-3 img {
+   position: absolute;
+   width: 150px;
+   top: 0px;
+   left: 10px;
+}
+.estrella-4 img {
+   position: absolute;
+   width: 150px;
+   bottom: 0x;
+   right: 10px;
+}
+.estrella-5 img {
+   position: absolute;
+   width: 150px;
+   bottom: 0px;
+   left: 10px;
+}
+.estrella-6 img {
+   position: absolute;
+   width: 150px;
+   bottom: 0px;
+   right: 10px;
+}
+
+.productos-libros-1 {
+   position: absolute;
+   top: 360px;
+   left: 70px;
+   border-color: yellowgreen;
+   border-width: 20px;
+   border-style: double;
+   background-color: rgb(0, 0, 0);
+}
+
+.productos-libros-1 img {
+   width: 200px;
+}
+
+.productos-libros-2 {
+   position: absolute;
+   top: 510px;
+   left: 320px;
+   border-color: yellowgreen;
+   border-width: 20px;
+   border-style: double;
+   background-color: rgb(0, 0, 0);
+}
+
+.productos-libros-2 img {
+   width: 200px;
+}
+
+.productos-libros-3 {
+   position: absolute;
+   top: 357px;
+   left: 570px;
+   border-color: yellowgreen;
+   border-width: 20px;
+   border-style: double;
+   background-color: rgb(0, 0, 0);
+}
+.productos-libros-3 img {
+   width: 200px;
+}
+
+.productos-libros-4 {
+   position: absolute;
+   top: 510px;
+   left: 820px;
+   border-color: yellowgreen;
+   border-width: 20px;
+   border-style: double;
+   background-color: rgb(0, 0, 0);
+}
+.productos-libros-4 img {
+   width: 190px;
+}
+
+.productos-libros-5 {
+   position: absolute;
+   top: 357px;
+   left: 1060px;
+   border-color: yellowgreen;
+   border-width: 20px;
+   border-style: double;
+   background-color: rgb(0, 0, 0);
+}
+.productos-libros-5 img {
+   width: 200px;
+}
+
+.productos-libros-6 {
+   position: absolute;
+   top: 510px;
+   left: 1310px;
+   border-color: yellowgreen;
+   border-width: 20px;
+   border-style: double;
+   background-color: rgb(0, 0, 0);
+}
+.productos-libros-6 img {
+   width: 200px;
+}
+
+.libros img{
+   width: 300px;
+   position: absolute;
+   top: 380px;
+   left: 50px;
+   border-color: yellowgreen;
+   border-width: 20px;
+   border-style: double;
+   background-color: rgb(0, 0, 0);
+}
+
+.descripcion-libro {
+position: absolute;
+color: whitesmoke;
+top: 450px;
+left: 450px;
+font-family:Arial, Helvetica, sans-serif;
+width: 40%;
+}
+
+.descripcion-libro .libro-1 {
+   position: absolute;
+   width: 100%;
+   top: -110px;
+   left: 700px;
+   border-style: double;
+   background-color: rgba(121, 6, 111, 0.418);
+}
+
+.descripcion-libro .comprar {
+   position: absolute;
+   top: 350px;
+   left: 250px;
+   border-style: double;
+   font-size: 6mm;
+   background-color: blueviolet ;
+
+}
+
+.descripcion-libro .descripcion {
+   position: absolute;
+   top: -50px;
+   font-family:Arial, Helvetica, sans-serif;
+   font-size: 7mm;
+   background-color: rgb(43, 183, 226);
+}
+
+.titulo-de-libros {
+   color: cornsilk;
+   background-color: rgba(220, 20, 60, 0.466);
+   font-size: 5mm;
+   position: absolute;
+   top: 320px;
+   font-family:Arial, Helvetica, sans-serif;
+}
