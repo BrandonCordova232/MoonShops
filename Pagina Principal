@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"&amp;gt;>
+    <link rel="stylesheet" href="diseño/diseño.css">
+    <link rel="icon" href="imagenes/logo-luna.jpg">
+
+    <title>MoonShop</title>
+</head>
+<body>
+    <header id="iluminación"></header>
+    <header>
+        <div class="libro-img"> 
+            <img src="imagenes/luna-img.png" alt="">
+        </div>
+        <div class="lapiz-img"> 
+            <img src="imagenes/lapiz-img.png" alt="">
+        </div>
+        <header id="información">
+            <div class="sobre-nosotros-title">
+                <h1><u>Sobre nosotros</u></h1>
+            </div>
+            <div class="luna-3">
+                <img src="imagenes/luna.jpg" alt="">
+            </div>
+            <div class="luna-4">
+                <img src="imagenes/luna.jpg" alt="">
+            </div>
+            <div class="sobre-nosotros-info">
+                <h3>
+                    Actualmente somos una pagina nueva en el mundo del Ecommerce que se <br>
+                    <br>
+                    especializa en la venta de libros. Estamos comprometidos con el buen trato <br>
+                    <br>
+                    hacía el cliente, ya sea, buena atención, puntualidad y cordialidad hacía el mismo.<br>
+                    <br>
+                    Contamos con una gran variedad de libros a la venta para cualquiera que este <br>
+                    <br>
+                    interesado en el mundo de la lectura. Hacemos envíos a lo largo y ancho del pais, <br>
+                    <br>
+                    contamos que distintas formas de pago, ya sea tarjeta de credito o debito. <br>
+                    <br>
+                    Esperamos contar con vuestra ayuda. ¡Gracias!.
+                </h3>
+            </div>
+            
+            <div class="">
+            </div>
+        <div id="centrada"> 
+            <div id="centrada"> 
+                <div class="cube flip-to-top"> 
+                    <div class="default-state facebook"> 
+                        <span>Facebook</span> 
+                    </div> 
+                    <div class="active-state facebook"> 
+                        <span><a href="https://www.facebook.com" target="_self">SIGUENOS</a></span> 
+                </div> 
+            </div>
+            <div class="cube flip-to-top youtube"> 
+                <div class="default-state"> 
+                    <span>Youtube</span> 
+                </div> 
+                <div class="active-state youtube"> 
+                    <span><a href="https://www.youtube.com" target="_self">SIGUENOS</a></span> 
+                </div> 
+            </div>
+            <div class="cube flip-to-top twitter"> 
+                <div class="default-state"> 
+                    <span>Twitter</span> 
+                </div> 
+                <div class="active-state twitter"> 
+                    <span><a href="https://twitter.com/?lang=es" target="_self">SIGUENOS</a></span> 
+                </div> 
+            </div>
+            <div class="cube flip-to-top"> 
+                <div class="default-state linkedin"> 
+                    <span>Linkedin</span> 
+                </div> 
+                <div class="active-state linkedin"> 
+                    <span><a href="https://www.linkedin.com/feed/" target="_self">SIGUENOS</a></span> 
+                </div> 
+            </div> 
+        </div>
+        </header>
+            <div class="moon"></div>
+                <div class="wrap">
+                    <span class="word"><s>MoonShop</s></span>
+                    <span style="position: fixed; top: 140px; left: 320px;">
+                        <img src="https://media.tenor.com/images/9888705c75924e8aeca8449a709d47f5/tenor.gif" alt="">
+                    </span>
+                    <span style="position: fixed; top: 140px; right: 400px;">
+                        <img src="https://media.tenor.com/images/9888705c75924e8aeca8449a709d47f5/tenor.gif" alt="">
+                    </span>
+                </div>
+            </div>
+            <div class="wrap">
+                    <span style="position: fixed; top: -170px; left: 400px;">
+                        <span class="word"><u><h6>Encuentra tu libro en:</h6></u></span>
+                    </span>
+            </div>
+            <div style="text-align: center;">
+                <span style="position:fixed; left: 16px;">
+                   <nav id="menu">
+                      <ul>
+                        <li><a href="menú.html">USUARIO</a>
+                          <ul>
+                            <li><a href="registro.html">REGISTRO</a></li>
+                            <li><a href="ingreso.html">INGRESO</a></li>
+                          </ul>
+                        </li>
+                        <li><a href="libros.html">LIBROS</a></li>
+                      </ul>
+                   </nav>
+                </span>
+            </div> 
+            <div class="logo">
+                <div style="text-align: center;">
+                   <span style="position:fixed; right: 55px; top: 57px;">
+                      <img src="imagenes/logo-luna.jpg" alt="luna">
+                </div>
+             </div>
+    </header>
+
+    <header id="productos">
+        <div class="texto">
+            <h1><u>Nuestros libros destacados</u></h1>
+            <div class="luna-1">
+                <img src="imagenes/luna.jpg" alt="">
+            </div>
+            <div class="luna-2">
+                <img src="imagenes/luna.jpg" alt="">
+            </div>
+        </div>
+        <div id="slider">
+            <input type="radio" name="slider" id="slide1" checked>
+            <input type="radio" name="slider" id="slide2">
+            <input type="radio" name="slider" id="slide3">
+            <input type="radio" name="slider" id="slide4">
+            <div id="slides">
+               <div id="overflow">
+                  <div class="inner">
+                    <div class="slide slide_1">
+                        <div class="slide-content">
+                            <div class="libro-1">
+                                <ul>
+                                    <li><h3>Formato: Libro físico</h3></li>
+                                    <li><h3>Autor: Stephen King</h3></li>
+                                    <br>
+                                    <li><h3>Editorial: Debolsillo</h3></li>
+                                    <li><h3>Categoría: Literatura</h3></li>
+                                    <br>
+                                    <li><h3>Año: 2013</h3></li>
+                                    <li><h3>Idioma: Español</h3></li>
+                                    <br>
+                                    <li><h3>N°páginas: 448</h3></li>
+                                    <li><h3>Encuadernación: Tapa blanda</h3></li>
+                                    <br>
+                                    <li><h3>Precio de venta: $4.200</h3></li>
+
+                                </ul>
+                            </div>
+                            <span style="position:relative; right: 220px;">
+                                <a href="libro-1-menú.html">
+                                    <img src="imagenes/milla-verde.jpg">
+                                </a>
+                        </div>
+                    </div>
+                    <div class="slide slide_2">
+                        <div class="slide-content">
+                            <div class="libro-2">
+                                <ul>
+                                    <li><h3>Formato: Libro físico</h3></li>
+                                    <li><h3>Autor: Antoine De Saint-Exupery</h3></li>
+                                    <br>
+                                    <li><h3>Editorial: Alma</h3></li>
+                                    <li><h3>Categoría: Literatura juvenil</h3></li>
+                                    <br>
+                                    <li><h3>Año: 2020</h3></li>
+                                    <li><h3>Idioma: Español</h3></li>
+                                    <br>
+                                    <li><h3>N°páginas: 112</h3></li>
+                                    <li><h3>Encuadernación: Pasta dura</h3></li>
+                                    <br>
+                                    <li><h3>Precio de venta: $8.930</h3></li>
+                                </ul>
+                            </div>
+                            <span style="position:relative; right: 155px; bottom: 130px;">
+                                <a href="libro-2-menú.html">
+                                    <img src="imagenes/principito.jpg" alt="">
+                                </a>
+                        </div>
+                    </div>
+                    <div class="slide slide_3">
+                        <div class="slide-content">
+                            <div class="libro-3">
+                                <ul>
+                                    <li><h3>Formato: Libro físico</h3></li>
+                                    <li><h3>Autor: Rowling,J.K.</h3></li>
+                                    <br>
+                                    <li><h3>Editorial: Salamandra</h3></li>
+                                    <li><h3>Categoría: Ficción</h3></li>
+                                    <br>
+                                    <li><h3>Año: 2020</h3></li>
+                                    <li><h3>Idioma: Castellano</h3></li>
+                                    <br>
+                                    <li><h3>N°páginas: 288</h3></li>
+                                    <li><h3>Encuadernación: Rústica</h3></li>
+                                    <br>
+                                    <li><h3>Precio de venta: $6.300</h3></li>
+                                </ul>
+                            </div>
+                            <span style="position:relative; right: 189px; bottom: 130px;">
+                                <a href="libro-3-menú.html">
+                                    <img src="imagenes/harry.jpg" alt="">
+                                </a>
+                        </div>
+                    </div>
+                     <div class="slide slide_4">
+                        <div class="slide-content">
+                            <div class="libro-4">
+                                <ul>
+                                    <li><h3>Formato: Libro físico</h3></li>
+                                    <li><h3>Autor: George R.R.Martín</h3></li>
+                                    <br>
+                                    <li><h3>Editorial: Debolsillo</h3></li>
+                                    <li><h3>Categoría: Literatura</h3></li>
+                                    <br>
+                                    <li><h3>Año: 2012</h3></li>
+                                    <li><h3>Idioma: Castellano</h3></li>
+                                    <br>
+                                    <li><h3>N°páginas: 798</h3></li>
+                                    <li><h3>Encuadernación: De bolsillo</h3></li>
+                                    <br>
+                                    <li><h3>Precio de venta: $8.400</h3></li>
+                                </ul>
+                            </div>
+                            <span style="position:relative; right: 177px; bottom: 130px;">
+                                <a href="libro-4-menú.html">
+                                    <img src="imagenes/got.jpg" alt="">
+                                </a>
+                        </div>
+                    </div>
+                  </div>
+               </div>
+            </div>
+            <div id="controls">
+               <label for="slide1"></label>
+               <label for="slide2"></label>
+               <label for="slide3"></label>
+               <label for="slide4"></label>
+            </div>
+            <div id="bullets">
+               <label for="slide1"></label>
+               <label for="slide2"></label>
+               <label for="slide3"></label>
+               <label for="slide4"></label>
+            </div>
+    </div>
+</body>
+</html>
