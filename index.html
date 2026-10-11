@@ -4,85 +4,73 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Meworld · Ropa de gatos kawaii</title>
-  <meta name="description" content="Poleras, polerones y totes con gatos kawaii e ilustraciones originales. Hecho en Chile.">
+  <meta name="description" content="Poleras, polerones y tote bags con gatos kawaii e ilustraciones originales. Impresión bajo pedido, hecho en Chile.">
   <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-  <a class="skip" href="#catalogo">Saltar al catálogo</a>
+  <a class="skip" href="#view">Saltar al contenido</a>
 
-  <div class="promo">✨ Envíos a todo Chile · Diseños originales de gatitos ✨</div>
+  <div class="promo" id="promo"></div>
 
-  <header class="nav">
-    <a class="logo" href="#" aria-label="Meworld, inicio"><span id="logo-cat"></span><span>Meworld</span></a>
-    <nav aria-label="Principal">
-      <a href="#catalogo">Tienda</a>
-      <a href="#historia">Nosotros</a>
-      <a href="#faq">Preguntas</a>
-    </nav>
-    <button class="cart-btn" id="open-cart" aria-label="Abrir carrito">🛍️ <span id="cart-count">0</span></button>
+  <header class="header">
+    <div class="header-main">
+      <button class="icon-btn menu-btn" id="menu-btn" aria-label="Abrir menú" aria-expanded="false" aria-controls="nav">☰</button>
+      <a class="logo" href="#/" aria-label="Meworld, ir al inicio"><span id="logo-cat"></span><span class="logo-text">Meworld</span></a>
+
+      <form class="search" id="search" role="search" autocomplete="off">
+        <label class="sr" for="q">Buscar productos</label>
+        <span class="search-ico" aria-hidden="true">🔍</span>
+        <input id="q" name="q" type="search" placeholder="Buscar gatitos, poleras, polerones…" aria-controls="suggest" aria-expanded="false">
+        <div class="suggest" id="suggest" role="listbox" hidden></div>
+      </form>
+
+      <button class="icon-btn cart-btn" id="open-cart" aria-label="Abrir carrito"><span aria-hidden="true">🛍️</span><span class="badge" id="cart-count">0</span></button>
+    </div>
+    <nav class="nav" id="nav" aria-label="Categorías"></nav>
   </header>
 
-  <main>
-    <section class="hero">
-      <div class="hero-text">
-        <p class="eyebrow">Colección 001 · Gatitos</p>
-        <h1>Ropa para gente que ama a los <em>gatos</em></h1>
-        <p>Ilustraciones kawaii y memes originales estampados en prendas suaves. Cada diseño se imprime bajo pedido, solo para ti.</p>
-        <a class="btn" href="#catalogo">Ver colección</a>
-        <a class="btn ghost" href="#historia">Conócenos</a>
+  <main id="view" tabindex="-1"></main>
+
+  <footer class="footer">
+    <div class="footer-top">
+      <div class="newsletter">
+        <h2>Únete a la manada 🐾</h2>
+        <p>Recibe novedades y un gatito de regalo en tu primera compra.</p>
+        <form id="news-form" novalidate>
+          <label class="sr" for="news-email">Tu correo</label>
+          <input id="news-email" type="email" placeholder="tu@correo.cl" required>
+          <button class="btn" type="submit">Suscribirme</button>
+        </form>
+        <p class="news-msg" id="news-msg" role="status" hidden></p>
       </div>
-      <div class="hero-art" id="hero-art" aria-hidden="true"></div>
-    </section>
-
-    <section class="strip" aria-label="Beneficios">
-      <div>🐾 Impresión bajo pedido</div>
-      <div>🌈 Colores pastel</div>
-      <div>💌 Hecho en Chile</div>
-      <div>🐱 Diseños únicos</div>
-    </section>
-
-    <section class="shop" id="catalogo">
-      <h2>Nuestros gatitos</h2>
-      <div class="filters" id="filters" role="group" aria-label="Filtrar por categoría"></div>
-      <div class="grid" id="grid"></div>
-    </section>
-
-    <section class="story" id="historia">
-      <div id="story-art" aria-hidden="true"></div>
-      <div>
-        <h2>Meworld nació de una obsesión</h2>
-        <p>Somos una tienda chilena de ropa con gatos: ilustraciones kawaii y humor gatuno con diseños propios. Imprimimos cada prenda bajo pedido, así que no hay stock que sobre y cada polera sale fresquita.</p>
-        <p>Si tu gato te juzga en silencio, aquí encontrarás tu polera.</p>
+      <div class="cols">
+        <div><h3>Tienda</h3><ul id="foot-shop"></ul></div>
+        <div><h3>Ayuda</h3><ul>
+          <li><a href="#/ayuda">Envíos</a></li><li><a href="#/ayuda">Cambios y devoluciones</a></li><li><a href="#/ayuda">Guía de tallas</a></li><li><a href="#/ayuda">Contacto</a></li></ul></div>
+        <div><h3>Meworld</h3><ul><li><a href="#/nosotros">Nosotros</a></li><li><a href="#/ayuda">Preguntas frecuentes</a></li></ul></div>
       </div>
-    </section>
-
-    <section class="faq" id="faq">
-      <h2>Preguntas frecuentes</h2>
-      <details><summary>¿Cuánto demora mi pedido?</summary><p>Al ser impresión bajo pedido, primero se produce y luego se despacha. Los plazos exactos los publicaremos al lanzar la tienda.</p></details>
-      <details><summary>¿Los diseños son originales?</summary><p>Sí. Dibujamos nuestros gatos; no usamos memes con derechos de autor de terceros.</p></details>
-      <details><summary>¿Puedo devolver una prenda?</summary><p>Al ser personalizadas, las devoluciones se aceptan por fallas de impresión o talla equivocada de nuestra parte. Política final por definir.</p></details>
-    </section>
-  </main>
-
-  <footer>
-    <span id="foot-cat"></span>
-    <p>© <span id="year"></span> Meworld · Hecho con 💗 y muchos maullidos</p>
+    </div>
+    <div class="footer-bottom"><span id="foot-cat"></span><p>© <span id="year"></span> Meworld · Hecho con 💗 en Chile</p></div>
   </footer>
 
   <div class="overlay" id="overlay" hidden></div>
-  <aside class="drawer" id="drawer" aria-label="Carrito" aria-hidden="true">
-    <div class="drawer-head"><h3>Tu carrito</h3><button id="close-cart" aria-label="Cerrar carrito">✕</button></div>
+  <aside class="drawer" id="drawer" aria-label="Carrito de compras" aria-hidden="true">
+    <div class="drawer-head"><h2>Tu carrito</h2><button class="icon-btn" id="close-cart" aria-label="Cerrar carrito">✕</button></div>
+    <div class="ship" id="ship"></div>
     <div id="cart-items"></div>
     <div class="drawer-foot">
-      <div class="total"><span>Total</span><strong id="cart-total">$0</strong></div>
-      <button class="btn block" id="checkout">Pagar</button>
+      <div class="total"><span>Subtotal</span><strong id="cart-total">$0</strong></div>
+      <p class="small">Envío calculado al pagar.</p>
+      <button class="btn block" id="checkout">Ir a pagar</button>
       <p class="note" id="checkout-note" hidden>El pago se activará cuando conectemos Shopify. 🐱</p>
     </div>
   </aside>
+
+  <dialog id="dialog" aria-labelledby="dialog-title"><div id="dialog-body"></div></dialog>
 
   <script src="js/products.js"></script>
   <script src="js/art.js"></script>

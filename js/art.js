@@ -58,19 +58,26 @@
     tote: `<path d="M76 96h108l10 140H66z"/><path d="M98 96V70q0-28 32-28t32 28v26" fill="none"/>`
   };
 
-  // Producto completo: prenda de color + gato estampado.
-  function productArt(p) {
+  // Producto completo: prenda del color elegido + gato estampado.
+  function productArt(p, hex) {
     const shape = SHAPES[p.type] || SHAPES.tee;
     const y = p.type === "tote" ? 126 : p.type === "hoodie" ? 104 : 86;
+    const fill = hex || p.colors[0].hex;
     return `<svg viewBox="0 0 260 260" role="img" aria-label="${p.name}" xmlns="http://www.w3.org/2000/svg">
-      <g fill="${p.garment}" stroke="${INK}" stroke-width="3.5" stroke-linejoin="round" stroke-linecap="round">${shape}</g>
+      <g fill="${fill}" stroke="${INK}" stroke-width="3.5" stroke-linejoin="round" stroke-linecap="round">${shape}</g>
       <g transform="translate(97 ${y}) scale(.55)">${catHead(p.cat)}</g>
     </svg>`;
+  }
+
+  // Detalle del estampado (cabeza grande sobre fondo del color de la prenda).
+  function printArt(p, hex) {
+    return `<svg viewBox="0 0 120 100" role="img" aria-label="Estampado de ${p.name}" xmlns="http://www.w3.org/2000/svg">
+      <rect width="120" height="100" fill="${hex || p.colors[0].hex}"/><g transform="translate(6 4) scale(.9)">${catHead(p.cat)}</g></svg>`;
   }
 
   function mascot(size) {
     return `<svg viewBox="0 0 120 100" width="${size}" height="${size * 100 / 120}" role="img" aria-label="Meworld" xmlns="http://www.w3.org/2000/svg">${catHead({ fur: "#fff4ec", ear: "#ffb3cf", face: "happy" })}</svg>`;
   }
 
-  window.Art = { productArt, mascot, catHead };
+  window.Art = { productArt, printArt, mascot, catHead };
 })();

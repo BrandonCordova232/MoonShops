@@ -14,11 +14,16 @@ python3 -m http.server 8000   # y abrir http://localhost:8000
 
 | Archivo | Qué hace |
 |---|---|
-| `index.html` | Página única: hero, catálogo, historia, FAQ, carrito |
-| `css/style.css` | Estilo kawaii (paleta pastel en `:root`) |
-| `js/products.js` | Catálogo de ejemplo (precios en CLP **placeholder**) |
+| `index.html` | Cabecera con buscador y navegación, contenedor de vistas, footer, carrito |
+| `css/style.css` | Estilo kawaii (paleta en `:root`) y diseño responsive |
+| `js/products.js` | **Todos los datos**: categorías, catálogo, colores, tallas, ficha técnica y guías de medidas |
 | `js/art.js` | Gatos y prendas dibujados en SVG |
-| `js/app.js` | Filtros y carrito (guardado en `localStorage`) |
+| `js/app.js` | Rutas (`#/`, `#/tienda`, `#/producto/id`), búsqueda, filtros, ficha de producto y carrito |
+
+## Cambiar nombres de categorías
+
+Edita `COLLECTIONS` en `js/products.js` (hoy «Categoría A/B/C»). La navegación, los filtros, las tarjetas y el footer se actualizan solos.
+La ficha técnica está en `SPECS` y las medidas en `SIZECHART`: valores de **ejemplo** a confirmar con tee.cl.
 
 ## Pendiente antes de vender
 
