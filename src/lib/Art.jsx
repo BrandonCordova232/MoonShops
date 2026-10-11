@@ -1,0 +1,102 @@
+// Ilustraciones kawaii en SVG puro (sin imágenes externas).
+const INK = "#5b3a4e";
+
+function Eyes({ face }) {
+  const stroke = { fill: "none", stroke: INK, strokeWidth: 3.5, strokeLinecap: "round" };
+  switch (face) {
+    case "happy":
+      return <path d="M34 54q6-9 12 0M74 54q6-9 12 0" {...stroke} />;
+    case "sleepy":
+      return (<>
+        <path d="M34 54q6 6 12 0M74 54q6 6 12 0" {...stroke} />
+        <text x="92" y="32" fontSize="14" fill={INK} fontWeight="700">z</text>
+        <text x="102" y="22" fontSize="10" fill={INK} fontWeight="700">z</text>
+      </>);
+    case "sparkle":
+      return (<>
+        <ellipse cx="40" cy="54" rx="7" ry="8.5" fill={INK} /><ellipse cx="80" cy="54" rx="7" ry="8.5" fill={INK} />
+        <circle cx="37.5" cy="50.5" r="2.8" fill="#fff" /><circle cx="77.5" cy="50.5" r="2.8" fill="#fff" />
+        <circle cx="42.5" cy="58" r="1.4" fill="#fff" /><circle cx="82.5" cy="58" r="1.4" fill="#fff" />
+      </>);
+    case "meh":
+      return (<>
+        <circle cx="40" cy="55" r="3.6" fill={INK} /><circle cx="80" cy="55" r="3.6" fill={INK} />
+        <path d="M32 47h16M72 47h16" stroke={INK} strokeWidth="3" strokeLinecap="round" />
+      </>);
+    case "cry":
+      return (<>
+        <ellipse cx="40" cy="54" rx="6.5" ry="8" fill={INK} /><ellipse cx="80" cy="54" rx="6.5" ry="8" fill={INK} />
+        <circle cx="38" cy="51" r="2.6" fill="#fff" /><circle cx="78" cy="51" r="2.6" fill="#fff" />
+        <path d="M36 64q-3 9 0 12q3-3 0-12zM84 64q-3 9 0 12q3-3 0-12z" fill="#8fd3ff" />
+      </>);
+    case "uwu":
+      return <path d="M32 50l8 5-8 5M88 50l-8 5 8 5" {...stroke} strokeLinejoin="round" />;
+    default:
+      return null;
+  }
+}
+
+function Mouth({ face }) {
+  if (face === "meh") return <path d="M54 71h12" stroke={INK} strokeWidth="3" strokeLinecap="round" />;
+  if (face === "cry") return <path d="M54 74q6-6 12 0" fill="none" stroke={INK} strokeWidth="3" strokeLinecap="round" />;
+  return <path d="M54 68q3 5 6 0q3 5 6 0" fill="none" stroke={INK} strokeWidth="3" strokeLinecap="round" strokeLinejoin="round" />;
+}
+
+// Cabeza de gato; ocupa un viewBox de 120x100.
+export function CatHead({ fur, ear, face }) {
+  return (
+    <g>
+      <path d="M18 44L22 10l30 18z" fill={fur} stroke={INK} strokeWidth="3" strokeLinejoin="round" />
+      <path d="M102 44L98 10 68 28z" fill={fur} stroke={INK} strokeWidth="3" strokeLinejoin="round" />
+      <path d="M26 36l2-14 14 8z" fill={ear} /><path d="M94 36l-2-14-14 8z" fill={ear} />
+      <ellipse cx="60" cy="58" rx="46" ry="38" fill={fur} stroke={INK} strokeWidth="3" />
+      <Eyes face={face} />
+      <ellipse cx="25" cy="66" rx="8" ry="5" fill={ear} opacity=".75" />
+      <ellipse cx="95" cy="66" rx="8" ry="5" fill={ear} opacity=".75" />
+      <path d="M57 62h6l-3 4z" fill={ear} stroke={INK} strokeWidth="2" strokeLinejoin="round" />
+      <Mouth face={face} />
+      <path d="M6 60l14 2M6 70l14-3M114 60l-14 2M114 70l-14-3" stroke={INK} strokeWidth="2.2" strokeLinecap="round" opacity=".55" />
+    </g>
+  );
+}
+
+const SHAPES = {
+  tee: <path d="M70 40L100 26Q130 46 160 26L192 40L224 76L200 96L184 82V222H76V82L60 96L36 76Z" />,
+  hoodie: (<>
+    <path d="M66 44Q130 6 194 44L238 150L206 164L184 116V226H76V116L54 164L22 150Z" />
+    <path d="M98 30Q130 70 162 30" fill="none" /><path d="M116 62v22M144 62v22" fill="none" />
+  </>),
+  tote: (<>
+    <path d="M76 96h108l10 140H66z" /><path d="M98 96V70q0-28 32-28t32 28v26" fill="none" />
+  </>),
+};
+const CAT_Y = { tee: 86, hoodie: 104, tote: 126 };
+
+// Prenda del color elegido + gato estampado.
+export function ProductArt({ product, hex, className = "block w-full" }) {
+  const { type, cat, name, colors } = product;
+  return (
+    <svg viewBox="0 0 260 260" role="img" aria-label={name} className={className}>
+      <g fill={hex || colors[0].hex} stroke={INK} strokeWidth="3.5" strokeLinejoin="round" strokeLinecap="round">{SHAPES[type]}</g>
+      <g transform={`translate(97 ${CAT_Y[type]}) scale(.55)`}><CatHead {...cat} /></g>
+    </svg>
+  );
+}
+
+// Detalle del estampado (cabeza grande sobre el color de la prenda).
+export function PrintArt({ product, hex, className = "block w-full" }) {
+  return (
+    <svg viewBox="0 0 120 100" role="img" aria-label={`Estampado de ${product.name}`} className={className}>
+      <rect width="120" height="100" fill={hex || product.colors[0].hex} />
+      <g transform="translate(6 4) scale(.9)"><CatHead {...product.cat} /></g>
+    </svg>
+  );
+}
+
+export function Mascot({ size = 48, face = "happy", className = "" }) {
+  return (
+    <svg viewBox="0 0 120 100" width={size} height={(size * 100) / 120} role="img" aria-label="Meworld" className={className}>
+      <CatHead fur="#fff4ec" ear="#ffb3cf" face={face} />
+    </svg>
+  );
+}

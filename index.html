@@ -1,79 +1,17 @@
 <!doctype html>
 <html lang="es">
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Meworld · Ropa de gatos kawaii</title>
-  <meta name="description" content="Poleras, polerones y tote bags con gatos kawaii e ilustraciones originales. Impresión bajo pedido, hecho en Chile.">
-  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/style.css">
-</head>
-<body>
-  <a class="skip" href="#view">Saltar al contenido</a>
-
-  <div class="promo" id="promo"></div>
-
-  <header class="header">
-    <div class="header-main">
-      <button class="icon-btn menu-btn" id="menu-btn" aria-label="Abrir menú" aria-expanded="false" aria-controls="nav">☰</button>
-      <a class="logo" href="#/" aria-label="Meworld, ir al inicio"><span id="logo-cat"></span><span class="logo-text">Meworld</span></a>
-
-      <form class="search" id="search" role="search" autocomplete="off">
-        <label class="sr" for="q">Buscar productos</label>
-        <span class="search-ico" aria-hidden="true">🔍</span>
-        <input id="q" name="q" type="search" placeholder="Buscar gatitos, poleras, polerones…" aria-controls="suggest" aria-expanded="false">
-        <div class="suggest" id="suggest" role="listbox" hidden></div>
-      </form>
-
-      <button class="icon-btn cart-btn" id="open-cart" aria-label="Abrir carrito"><span aria-hidden="true">🛍️</span><span class="badge" id="cart-count">0</span></button>
-    </div>
-    <nav class="nav" id="nav" aria-label="Categorías"></nav>
-  </header>
-
-  <main id="view" tabindex="-1"></main>
-
-  <footer class="footer">
-    <div class="footer-top">
-      <div class="newsletter">
-        <h2>Únete a la manada 🐾</h2>
-        <p>Recibe novedades y un gatito de regalo en tu primera compra.</p>
-        <form id="news-form" novalidate>
-          <label class="sr" for="news-email">Tu correo</label>
-          <input id="news-email" type="email" placeholder="tu@correo.cl" required>
-          <button class="btn" type="submit">Suscribirme</button>
-        </form>
-        <p class="news-msg" id="news-msg" role="status" hidden></p>
-      </div>
-      <div class="cols">
-        <div><h3>Tienda</h3><ul id="foot-shop"></ul></div>
-        <div><h3>Ayuda</h3><ul>
-          <li><a href="#/ayuda">Envíos</a></li><li><a href="#/ayuda">Cambios y devoluciones</a></li><li><a href="#/ayuda">Guía de tallas</a></li><li><a href="#/ayuda">Contacto</a></li></ul></div>
-        <div><h3>Meworld</h3><ul><li><a href="#/nosotros">Nosotros</a></li><li><a href="#/ayuda">Preguntas frecuentes</a></li></ul></div>
-      </div>
-    </div>
-    <div class="footer-bottom"><span id="foot-cat"></span><p>© <span id="year"></span> Meworld · Hecho con 💗 en Chile</p></div>
-  </footer>
-
-  <div class="overlay" id="overlay" hidden></div>
-  <aside class="drawer" id="drawer" aria-label="Carrito de compras" aria-hidden="true">
-    <div class="drawer-head"><h2>Tu carrito</h2><button class="icon-btn" id="close-cart" aria-label="Cerrar carrito">✕</button></div>
-    <div class="ship" id="ship"></div>
-    <div id="cart-items"></div>
-    <div class="drawer-foot">
-      <div class="total"><span>Subtotal</span><strong id="cart-total">$0</strong></div>
-      <p class="small">Envío calculado al pagar.</p>
-      <button class="btn block" id="checkout">Ir a pagar</button>
-      <p class="note" id="checkout-note" hidden>El pago se activará cuando conectemos Shopify. 🐱</p>
-    </div>
-  </aside>
-
-  <dialog id="dialog" aria-labelledby="dialog-title"><div id="dialog-body"></div></dialog>
-
-  <script src="js/products.js"></script>
-  <script src="js/art.js"></script>
-  <script src="js/app.js"></script>
-</body>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Meworld · Ropa de gatos kawaii</title>
+    <meta name="description" content="Poleras, polerones y tote bags con gatos kawaii e ilustraciones originales. Impresión bajo pedido, hecho en Chile." />
+    <link rel="icon" href="./favicon.svg" type="image/svg+xml" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet" />
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.jsx"></script>
+  </body>
 </html>

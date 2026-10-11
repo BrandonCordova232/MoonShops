@@ -3,43 +3,43 @@
 //  con los datos reales antes del lanzamiento).
 // ============================================================
 
-window.STORE = {
+export const STORE = {
   name: "Meworld",
-  freeShippingFrom: 40000,          // EJEMPLO: umbral de envío gratis (CLP)
-  productionNote: "Producción bajo pedido"
+  freeShippingFrom: 40000, // EJEMPLO: umbral de envío gratis (CLP)
+  productionNote: "Producción bajo pedido",
 };
 
 // Tipos de prenda (filtro "Tipo")
-window.TYPES = { tee: "Poleras", hoodie: "Polerones", tote: "Accesorios" };
+export const TYPES = { tee: "Poleras", hoodie: "Polerones", tote: "Accesorios" };
 
 // EJEMPLO: nombres de categorías / colecciones. Cámbialos aquí y la
 // navegación, los filtros y las tarjetas se actualizan solos.
-window.COLLECTIONS = [
+export const COLLECTIONS = [
   { id: "col-a", name: "Categoría A", blurb: "Gatitos tiernos y suaves" },
   { id: "col-b", name: "Categoría B", blurb: "Humor y actitud gatuna" },
-  { id: "col-c", name: "Categoría C", blurb: "Memes originales" }
+  { id: "col-c", name: "Categoría C", blurb: "Memes originales" },
 ];
 
-// Paleta de colores de prenda
 const C = {
-  rosa:  { name: "Rosa chicle",  hex: "#ffd6e7" },
-  lila:  { name: "Lila",         hex: "#d9ccff" },
-  menta: { name: "Menta",        hex: "#c9f1e4" },
-  mant:  { name: "Mantequilla",  hex: "#fff2b8" },
-  cielo: { name: "Cielo",        hex: "#c6e5ff" },
-  dura:  { name: "Durazno",      hex: "#ffe0cc" },
-  crema: { name: "Crema",        hex: "#fdf6e3" },
-  blanco:{ name: "Blanco",       hex: "#ffffff" }
+  rosa: { name: "Rosa chicle", hex: "#ffd6e7" },
+  lila: { name: "Lila", hex: "#d9ccff" },
+  menta: { name: "Menta", hex: "#c9f1e4" },
+  mant: { name: "Mantequilla", hex: "#fff2b8" },
+  cielo: { name: "Cielo", hex: "#c6e5ff" },
+  dura: { name: "Durazno", hex: "#ffe0cc" },
+  crema: { name: "Crema", hex: "#fdf6e3" },
+  blanco: { name: "Blanco", hex: "#ffffff" },
 };
 
-window.SIZES = {
+export const SIZES = {
   tee: ["XS", "S", "M", "L", "XL", "XXL"],
   hoodie: ["S", "M", "L", "XL"],
-  tote: ["Única"]
+  tote: ["Única"],
 };
+export const ALL_SIZES = ["XS", "S", "M", "L", "XL", "XXL", "Única"];
 
 // EJEMPLO: ficha técnica por tipo. Confirmar con tee.cl (material, gramaje, origen).
-window.SPECS = {
+export const SPECS = {
   tee: [
     ["Material", "100% algodón peinado"],
     ["Gramaje", "180 g/m²"],
@@ -47,7 +47,7 @@ window.SPECS = {
     ["Cuello", "Redondo con rib 1×1"],
     ["Técnica de estampado", "DTG (impresión digital directa)"],
     ["Cuidado", "Lavar del revés a máx. 30 °C. No usar secadora. Planchar al revés a baja temperatura."],
-    ["Producción", "Bajo pedido"]
+    ["Producción", "Bajo pedido"],
   ],
   hoodie: [
     ["Material", "80% algodón · 20% poliéster, felpa afelpada"],
@@ -57,7 +57,7 @@ window.SPECS = {
     ["Bolsillo", "Canguro frontal"],
     ["Técnica de estampado", "DTG (impresión digital directa)"],
     ["Cuidado", "Lavar del revés a máx. 30 °C. No usar secadora ni blanqueador."],
-    ["Producción", "Bajo pedido"]
+    ["Producción", "Bajo pedido"],
   ],
   tote: [
     ["Material", "100% algodón, lona"],
@@ -66,21 +66,21 @@ window.SPECS = {
     ["Asas", "Largo 65 cm, costura reforzada"],
     ["Técnica de estampado", "DTG (impresión digital directa)"],
     ["Cuidado", "Lavar a mano o a máx. 30 °C. No usar secadora."],
-    ["Producción", "Bajo pedido"]
-  ]
+    ["Producción", "Bajo pedido"],
+  ],
 };
 
 // EJEMPLO: guías de tallas (medidas en cm, prenda plana).
-window.SIZECHART = {
+export const SIZECHART = {
   tee: { head: ["Talla", "Ancho", "Largo", "Manga"],
     rows: [["XS", 47, 66, 19], ["S", 50, 68, 20], ["M", 53, 70, 21], ["L", 56, 72, 22], ["XL", 59, 74, 23], ["XXL", 62, 76, 24]] },
   hoodie: { head: ["Talla", "Ancho", "Largo", "Manga"],
     rows: [["S", 54, 66, 60], ["M", 57, 68, 62], ["L", 60, 70, 63], ["XL", 63, 72, 64]] },
-  tote: { head: ["Medida", "Ancho", "Alto", "Asa"], rows: [["Única", 38, 42, 65]] }
+  tote: { head: ["Medida", "Ancho", "Alto", "Asa"], rows: [["Única", 38, 42, 65]] },
 };
 
 // EJEMPLO: catálogo. Precios en CLP.
-window.PRODUCTS = [
+export const PRODUCTS = [
   { id: "poler-mochi", name: "Polera Gato Mochi", type: "tee", collection: "col-a", price: 17990, isNew: true,
     colors: [C.rosa, C.blanco, C.menta], cat: { fur: "#fff4ec", ear: "#ffb3cf", face: "happy" },
     desc: "Un gatito redondo y blandito como mochi. Estampado frontal de colores suaves sobre algodón peinado." },
@@ -116,5 +116,8 @@ window.PRODUCTS = [
     desc: "Lona resistente con una carita imposible de ignorar." },
   { id: "tote-siesta", name: "Tote Bag Siesta", type: "tote", collection: "col-b", price: 11990, isNew: true,
     colors: [C.lila, C.crema], cat: { fur: "#e8e1ff", ear: "#b9a6ff", face: "sleepy" },
-    desc: "El tote más tranquilo del mundo. Duerme mientras tú compras." }
+    desc: "El tote más tranquilo del mundo. Duerme mientras tú compras." },
 ];
+
+export const byId = (id) => PRODUCTS.find((p) => p.id === id);
+export const collectionName = (id) => COLLECTIONS.find((c) => c.id === id)?.name ?? "";
